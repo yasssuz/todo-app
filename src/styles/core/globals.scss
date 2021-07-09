@@ -1,0 +1,24 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  position: relative;
+
+  body {
+    position: relative;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.125rem;
+
+    button,
+    a,
+    input {
+      outline: 2px dashed rgb(255, 255, 0);
+    }
+  }
+}
