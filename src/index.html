@@ -30,6 +30,53 @@
       </p>
     <![endif]-->
 
+    <main
+      class="
+        dark:bg-darkTheme-veryDarkBlue
+        bg-lightTheme-veryLightGray
+        h-screen
+      "
+    >
+      <header class="header h-52 pt-12 px-6 md:h-72 md:pt-20 lg:h-80">
+        <div class="max-w-xl mx-auto">
+          <div class="flex align-center justify-between">
+            <h1 id="title" class="text-white text-3xl font-bold md:text-4xl">
+              TODO
+            </h1>
+            <button id="toggle-theme-btn" class="cursor-pointer">
+              <img
+                src="./assets/icon-sun.svg"
+                id="icon-sun"
+                alt="light theme"
+              />
+              <img
+                src="./assets/icon-moon.svg"
+                id="icon-moon"
+                alt="dark theme"
+              />
+            </button>
+          </div>
+          <form class="mt-10">
+            <input
+              id="create-todo-input"
+              class="
+                w-full
+                dark:bg-darkTheme-veryDarkDesaturatedBlue
+                h-12
+                px-10
+                rounded-md
+                dark:text-white
+                text-base text-black
+                md:h-16 md:text-lg
+              "
+              type="text"
+              placeholder="Create a new todo..."
+            />
+          </form>
+        </div>
+      </header>
+    </main>
+
     <script src="./scripts/app.js" type="module" async defer></script>
   </body>
 </html>
