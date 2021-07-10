@@ -3,6 +3,8 @@ module.exports = {
   darkMode: "class",
   theme: {
     colors: {
+      white: "#FFF",
+      black: "#000",
       lightTheme: {
         veryLightGray: "hsl(0, 0%, 98%)",
         veryLightGrayishBlue: "hsl(236, 33%, 92%)",
