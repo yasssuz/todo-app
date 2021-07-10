@@ -1,0 +1,46 @@
+.header {
+  background: url("../assets/bg-mobile-dark.jpg") no-repeat center;
+  background-size: cover;
+  transition: height 0.3s ease;
+
+  #icon-moon {
+    display: none;
+  }
+
+  #icon-sun {
+    display: block;
+  }
+
+  @media screen and (min-width: 768px) {
+    background: url("../assets/bg-desktop-dark.jpg") no-repeat center;
+    background-size: cover;
+  }
+
+  &.light {
+    background: url("../assets/bg-mobile-light.jpg") no-repeat center;
+    background-size: cover;
+
+    #icon-moon {
+      display: block;
+    }
+
+    #icon-sun {
+      display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+      background: url("../assets/bg-desktop-light.jpg") no-repeat center;
+      background-size: cover;
+    }
+  }
+
+  #title {
+    letter-spacing: 0.4em;
+  }
+
+  #create-todo-input {
+    &::placeholder {
+      color: hsl(234, 11%, 52%);
+    }
+  }
+}
