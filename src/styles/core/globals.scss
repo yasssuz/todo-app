@@ -18,7 +18,9 @@ html {
     button,
     a,
     input {
-      outline: 2px dashed rgb(255, 255, 0);
+      &:focus {
+        outline: 2px dashed rgb(255, 255, 0);
+      }
     }
   }
 }
