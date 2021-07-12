@@ -1,5 +1,11 @@
 import { getInitialTheme, toggleTheme } from "./theme";
-import { addTodo, markTodo, removeTodo } from "./todo";
+import {
+  addTodo,
+  displayStoredTodos,
+  markTodo,
+  removeTodo,
+  storeTodo,
+} from "./todo";
 import { getAllQueries, getQuery } from "./utils";
 
 const form = document.forms.todoCreation;
@@ -8,7 +14,10 @@ const form = document.forms.todoCreation;
 getQuery("#toggle-theme-btn").addEventListener("click", toggleTheme);
 
 // saved/initial theme feature
-window.addEventListener("load", getInitialTheme);
+window.addEventListener("load", () => {
+  getInitialTheme();
+  displayStoredTodos();
+});
 
 // observe changes on the todos list
 const observer = new MutationObserver(() => {
@@ -24,7 +33,14 @@ const observer = new MutationObserver(() => {
 });
 
 // add todo feature
-form.addEventListener("submit", e => addTodo(e, form));
+form.addEventListener("submit", e => {
+  e.preventDefault();
+
+  const { todoContent } = form;
+
+  addTodo(todoContent.value);
+  storeTodo(todoContent.value);
+});
 
 // set observer config
 observer.observe(getQuery(".todos-list"), {
