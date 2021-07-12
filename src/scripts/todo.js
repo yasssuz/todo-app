@@ -1,5 +1,24 @@
 import { getQuery } from "./utils";
 
+function getStoredTodos() {
+  let todos;
+
+  if (localStorage.getItem("todos") == null) {
+    todos = [];
+  } else {
+    todos = JSON.parse(localStorage.getItem("todos"));
+  }
+
+  return todos;
+}
+
+export function storeTodo(todo) {
+  const todos = getStoredTodos();
+
+  todos.push(todo);
+  localStorage.setItem("todos", JSON.stringify(todos));
+}
+
 export function markTodo(e) {
   const todoBtn = e.target;
 
@@ -8,16 +27,19 @@ export function markTodo(e) {
 }
 
 export function removeTodo(e) {
-  const todo = e.target.parentElement;
+  const todoElement = e.target.parentElement;
+  const todoValue = e.target.previousElementSibling.innerText;
+  const todos = getStoredTodos();
 
-  todo.classList.add("removing-animation");
-  todo.addEventListener("transitionend", () => todo.remove());
+  todos.forEach((todo, index) => {
+    if (todo === todoValue) todos.splice(index, 1);
+  });
+  localStorage.setItem("todos", JSON.stringify(todos));
+  todoElement.classList.add("removing-animation");
+  todoElement.addEventListener("transitionend", () => todoElement.remove());
 }
 
-export function addTodo(e, form) {
-  e.preventDefault();
-
-  const { todoContent } = form;
+export function addTodo(todo) {
   const newTodo = document.createElement("li");
 
   newTodo.setAttribute(
@@ -29,7 +51,7 @@ export function addTodo(e, form) {
   newTodo.innerHTML = `
     <button class="checkbox-completed mr-3"></button>
     <span class="dark:text-white text-sm md:text-base lg:text-md">
-      ${todoContent.value}
+      ${todo}
     </span>
     <button class="remove-todo ml-auto lg:hidden">
       <img
@@ -40,24 +62,10 @@ export function addTodo(e, form) {
     </button>
   `;
   getQuery(".todos-list").appendChild(newTodo);
-  todoContent.value = "";
-  // storeTodo(todoContent.value);
 }
 
-// export function getStoredTodos() {
-//   let todos;
+export function displayStoredTodos() {
+  const todos = getStoredTodos();
 
-//   if (localStorage.getItem("todos") == null) {
-//     todos = [];
-//   } else {
-//     todos = JSON.parse(localStorage.getItem("todos"));
-//   }
-
-//   return todos;
-// }
-
-// function storeTodo(todo) {
-//   const todos = getStoredTodos();
-
-//   console.log(todos);
-// }
+  todos.map(todo => addTodo(todo));
+}
