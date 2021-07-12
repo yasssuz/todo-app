@@ -56,7 +56,7 @@
               />
             </button>
           </div>
-          <form class="mt-7">
+          <form class="mt-7" autocomplete="off" name="todoCreation">
             <input
               id="create-todo-input"
               class="
@@ -71,35 +71,13 @@
               "
               type="text"
               placeholder="Create a new todo..."
+              name="todoContent"
             />
           </form>
         </div>
       </header>
       <section class="todos max-w-xl m-auto px-6 -mt-7">
-        <ul>
-          <li
-            class="
-              h-12
-              flex
-              items-center
-              px-6
-              dark:bg-darkTheme-veryDarkDesaturatedBlue
-              justify-start
-            "
-          >
-            <button class="checkbox-completed mr-3"></button>
-            <span class="dark:text-white text-sm md:text-base lg:text-md"
-              >online courses</span
-            >
-            <button class="remove-todo ml-auto lg:hidden">
-              <img
-                class="pointer-events-none"
-                src="./assets/icon-cross.svg"
-                alt="remove todo"
-              />
-            </button>
-          </li>
-        </ul>
+        <ul class="todos-list"></ul>
       </section>
     </main>
 
