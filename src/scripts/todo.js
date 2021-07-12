@@ -46,11 +46,13 @@ export function addTodo(todo) {
     "class",
     `h-12 flex items-center px-6 
     dark:bg-darkTheme-veryDarkDesaturatedBlue
-    justify-start`
+    justify-start
+    md:h-16
+    `
   );
   newTodo.innerHTML = `
     <button class="checkbox-completed mr-3"></button>
-    <span class="dark:text-white text-sm md:text-base lg:text-md">
+    <span class="dark:text-white text-sm md:text-lg">
       ${todo}
     </span>
     <button class="remove-todo ml-auto lg:hidden">
