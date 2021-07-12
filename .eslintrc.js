@@ -9,6 +9,6 @@ module.exports = {
     sourceType: "module",
   },
   rules: {
-    allowShortCircuit: true,
+    // allowShortCircuit: true,
   },
 };
