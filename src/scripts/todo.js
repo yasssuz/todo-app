@@ -1,6 +1,6 @@
 import { getQuery } from "./utils";
 
-function getStoredTodos() {
+export function getStoredTodos() {
   let todos;
 
   if (localStorage.getItem("todos") == null) {
