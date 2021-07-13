@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="./styles/core/tailwind.config.css" />
     <link rel="stylesheet" href="./styles/index.scss" />
   </head>
-  <body>
+  <body class="dark:bg-darkTheme-veryDarkBlue bg-lightTheme-veryLightGray">
     <!--[if lt IE 7]>
       <p class="browsehappy">
         You are using an <strong>outdated</strong> browser. Please
@@ -30,13 +30,7 @@
       </p>
     <![endif]-->
 
-    <main
-      class="
-        dark:bg-darkTheme-veryDarkBlue
-        bg-lightTheme-veryLightGray
-        h-screen
-      "
-    >
+    <main class="h-screen">
       <header class="header h-52 pt-12 px-6 md:h-72 md:pt-20 lg:h-80">
         <div class="max-w-xl mx-auto">
           <div class="flex align-center justify-between">
@@ -98,8 +92,10 @@
             "
           >
             <span id="count" class="md:font-bold">0 items left</span>
-            <div class="hidden md:block">
-              <button class="all-filter-option font-bold mr-5">All</button>
+            <div class="filtering-area hidden md:block">
+              <button class="all-filter-option selected font-bold mr-5">
+                All
+              </button>
               <button class="active-filter-option font-bold mr-5">
                 Active
               </button>
@@ -113,6 +109,7 @@
           </section>
           <section
             class="
+              filtering-area
               flex
               items-center
               justify-center
