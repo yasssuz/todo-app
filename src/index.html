@@ -83,6 +83,55 @@
       <section class="todos px-6 -mt-7 md:-mt-10 lg:-mt-14">
         <ul class="todos-list max-w-xl mx-auto"></ul>
       </section>
+      <footer class="footer px-6">
+        <div class="max-w-xl mx-auto">
+          <section
+            class="
+              flex
+              items-center
+              justify-between
+              dark:bg-darkTheme-veryDarkDesaturatedBlue
+              rounded-b-md
+              h-12
+              px-6
+              text-sm text-darkTheme-darkGrayishBlue
+            "
+          >
+            <span id="count" class="md:font-bold">0 items left</span>
+            <div class="hidden md:block">
+              <button class="all-filter-option font-bold mr-5">All</button>
+              <button class="active-filter-option font-bold mr-5">
+                Active
+              </button>
+              <button class="completed-filter-option font-bold">
+                Completed
+              </button>
+            </div>
+            <button id="clear-completed-option" class="md:font-bold">
+              Clear Completed
+            </button>
+          </section>
+          <section
+            class="
+              flex
+              items-center
+              justify-center
+              mt-4
+              dark:bg-darkTheme-veryDarkDesaturatedBlue
+              rounded-md
+              h-12
+              text-darkTheme-darkGrayishBlue
+              md:hidden
+            "
+          >
+            <button class="all-filter-option selected mr-4 font-bold">
+              All
+            </button>
+            <button class="active-filter-option mr-4 font-bold">Active</button>
+            <button class="completed-filter-option font-bold">Completed</button>
+          </section>
+        </div>
+      </footer>
     </main>
 
     <script src="./scripts/app.js" type="module" async defer></script>
