@@ -1,5 +1,5 @@
 import setCounter from "./footer/counter";
-import { clearCompleted } from "./footer/filter";
+import { clearCompleted, filterTodos } from "./footer/filter";
 import { getInitialTheme, toggleTheme } from "./theme";
 import {
   addTodo,
@@ -38,6 +38,11 @@ const observer = new MutationObserver(() => {
 
 // clear completed feature
 getQuery("#clear-completed-option").addEventListener("click", clearCompleted);
+
+// filtering feature
+getAllQueries(".filtering-area").forEach(element =>
+  element.addEventListener("click", filterTodos)
+);
 
 // add todo feature
 form.addEventListener("submit", e => {
