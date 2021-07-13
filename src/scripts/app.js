@@ -1,3 +1,4 @@
+import setCounter from "./footer/counter";
 import { getInitialTheme, toggleTheme } from "./theme";
 import {
   addTodo,
@@ -30,6 +31,8 @@ const observer = new MutationObserver(() => {
   getAllQueries(".remove-todo").forEach(element =>
     element.addEventListener("click", removeTodo)
   );
+
+  setCounter();
 });
 
 // add todo feature
