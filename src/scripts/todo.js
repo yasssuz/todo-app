@@ -46,6 +46,7 @@ export function addTodo(todo) {
     "class",
     `h-12 flex items-center px-6 
     dark:bg-darkTheme-veryDarkDesaturatedBlue
+    bg-white
     justify-start
     md:h-16
     `
