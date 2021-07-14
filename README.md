@@ -36,7 +36,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/mobile-first-scss-and-javascript-todo-app-bundled-with-vitejs-A4ZBHUnrQ](https://www.frontendmentor.io/solutions/mobile-first-scss-and-javascript-todo-app-bundled-with-vitejs-A4ZBHUnrQ)
 - Live Site URL: [https://todo-app-nine-iota.vercel.app/](https://todo-app-nine-iota.vercel.app/)
 
 ## My process
@@ -55,7 +55,7 @@ Users should be able to:
 
 ### What I learned
 
-Very simple todo application. I tried for the first time the a new javascript API called "MutationObserver" and it's awesome. I will clearly use it in a few project i have in mind because you can have a ton of control an observe every change in the dom easily.
+I tried for the first time the new javascript API called "MutationObserver" and it's awesome. I will clearly use it in a few projects i have in mind because you can have a ton of control and observe every change in the dom easily.
 
 ## Author
 
