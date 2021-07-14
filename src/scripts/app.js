@@ -33,6 +33,7 @@ const observer = new MutationObserver(() => {
     element.addEventListener("click", removeTodo)
   );
 
+  // update counter
   setCounter();
 });
 
