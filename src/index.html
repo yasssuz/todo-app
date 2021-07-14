@@ -74,7 +74,7 @@
           </form>
         </div>
       </header>
-      <section class="todos px-6 -mt-7 md:-mt-10 lg:-mt-14">
+      <section class="todos mx-6 -mt-7 md:-mt-10 lg:-mt-14">
         <ul class="todos-list max-w-xl mx-auto"></ul>
       </section>
       <footer class="footer px-6">
@@ -85,25 +85,46 @@
               items-center
               justify-between
               dark:bg-darkTheme-veryDarkDesaturatedBlue
+              bg-white
               rounded-b-md
               h-12
               px-6
-              text-sm text-darkTheme-darkGrayishBlue
+              text-sm
+              dark:Qtext-darkTheme-darkGrayishBlue
+              md:h-16 md:text-base
+              text-lightTheme-darkGrayishBlue
             "
           >
-            <span id="count" class="md:font-bold">0 items left</span>
+            <span id="count" class="md:dark:font-bold font-normal"
+              >0 items left</span
+            >
             <div class="filtering-area hidden md:block">
-              <button class="all-filter-option selected font-bold mr-5">
+              <button
+                class="
+                  all-filter-option
+                  selected
+                  dark:font-bold
+                  font-normal
+                  mr-5
+                "
+              >
                 All
               </button>
-              <button class="active-filter-option font-bold mr-5">
+              <button
+                class="active-filter-option dark:font-bold font-normal mr-5"
+              >
                 Active
               </button>
-              <button class="completed-filter-option font-bold">
+              <button
+                class="completed-filter-option dark:font-bold font-normal"
+              >
                 Completed
               </button>
             </div>
-            <button id="clear-completed-option" class="md:font-bold">
+            <button
+              id="clear-completed-option"
+              class="md:dark:font-bold font-normal"
+            >
               Clear Completed
             </button>
           </section>
@@ -119,6 +140,7 @@
               h-12
               text-darkTheme-darkGrayishBlue
               md:hidden
+              bg-white
             "
           >
             <button class="all-filter-option selected mr-4 font-bold">
