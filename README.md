@@ -36,7 +36,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW/hub/mobile-first-scss-and-javascript-todo-app-bundled-with-vitejs-A4ZBHUnrQ](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW/hub/mobile-first-scss-and-javascript-todo-app-bundled-with-vitejs-A4ZBHUnrQ)
+- Solution URL: [https://www.frontendmentor.io/solutions/mobile-first-scss-and-javascript-todo-app-bundled-with-vitejs-A4ZBHUnrQ](https://www.frontendmentor.io/solutions/mobile-first-scss-and-javascript-todo-app-bundled-with-vitejs-A4ZBHUnrQ)
 - Live Site URL: [https://todo-app-nine-iota.vercel.app/](https://todo-app-nine-iota.vercel.app/)
 
 ## My process
