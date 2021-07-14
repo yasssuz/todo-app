@@ -52,6 +52,7 @@ form.addEventListener("submit", e => {
 
   addTodo(todoContent.value);
   storeTodo(todoContent.value);
+  todoContent.value = ''
 });
 
 // set observer config
