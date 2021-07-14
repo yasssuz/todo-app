@@ -1,3 +1,4 @@
+import setCounter from "./footer/counter";
 import { getQuery } from "./utils";
 
 export function getStoredTodos() {
@@ -24,6 +25,7 @@ export function markTodo(e) {
 
   todoBtn.classList.toggle("marked");
   todoBtn.parentElement.classList.toggle("marked");
+  setCounter();
 }
 
 export function removeTodo(e) {
