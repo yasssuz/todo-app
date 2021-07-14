@@ -5,8 +5,8 @@ export default function setCounter() {
   const counter = getQuery("#count");
   let count = 0;
 
-  todos.forEach(() => {
-    count = 1 + count;
+  todos.forEach(todo => {
+    if (!todo.classList.contains("marked")) count = 1 + count;
   });
 
   counter.textContent = `${count} items left`;
