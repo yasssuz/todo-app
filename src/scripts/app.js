@@ -7,6 +7,7 @@ import {
   markTodo,
   removeTodo,
   storeTodo,
+  validateInput,
 } from "./todo";
 import { getAllQueries, getQuery } from "./utils";
 
@@ -48,12 +49,16 @@ getAllQueries(".filtering-area").forEach(element =>
 // add todo feature
 form.addEventListener("submit", e => {
   e.preventDefault();
-
   const { todoContent } = form;
 
-  addTodo(todoContent.value);
-  storeTodo(todoContent.value);
-  todoContent.value = ''
+  try {
+    validateInput(todoContent.value);
+    addTodo(todoContent.value);
+    storeTodo(todoContent.value);
+    todoContent.value = "";
+  } catch (err) {
+    console.log(err);
+  }
 });
 
 // set observer config
