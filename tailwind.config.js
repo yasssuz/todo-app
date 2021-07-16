@@ -5,6 +5,7 @@ module.exports = {
     colors: {
       white: "#FFF",
       black: "#000",
+      softRed: "#ff3636",
       lightTheme: {
         veryLightGray: "hsl(0, 0%, 98%)",
         veryLightGrayishBlue: "hsl(236, 33%, 92%)",
