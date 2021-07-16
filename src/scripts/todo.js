@@ -1,6 +1,24 @@
 import setCounter from "./footer/counter";
 import { getQuery } from "./utils";
 
+function showError(log) {
+  const errElement = getQuery(".error-log");
+
+  errElement.innerText = log;
+}
+
+export function validateInput(value) {
+  if (value.trim() === "") {
+    showError("cannot be empty");
+    throw new Error("cannot be empty");
+  } else if (value.trim().length > 25) {
+    showError("too long");
+    throw new Error("too long");
+  }
+
+  showError("");
+}
+
 export function getStoredTodos() {
   let todos;
 
