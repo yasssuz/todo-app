@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ["./src/index.html"],
+  purge: [],
   darkMode: "class",
   theme: {
     colors: {
